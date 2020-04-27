@@ -15,7 +15,6 @@ class FirstPage extends StatelessWidget{
     Function goToInfoGoupeSosiePage(){
 
     }
-
     /*
     //Function to define action for the page's unique button
     final nextAction = FloatingActionButton(
@@ -37,13 +36,13 @@ class FirstPage extends StatelessWidget{
         child: Container(
           color: Colors.white,
           child: Padding(
-            padding: const EdgeInsets.all(100.0),
+            padding: EdgeInsets.all(100.0), //Aim to manege spaces (left, right, ...) around widgets (column here) 
             child: Column(
               //crossAxisAlignment: CrossAxisAlignment.center,
               //mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                SizedBox(
-                  height: 250.0,
+                SizedBox( //Aim to create empty boxes to add spaces between widgets
+                  height: 45.0,
                   child: Image.asset(
                     "assets/Logo_twinny.png",
                     fit: BoxFit.contain,
