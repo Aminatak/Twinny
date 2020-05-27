@@ -58,8 +58,8 @@ flutter:
   fonts:
     - family: Alegreya
       fonts:
-        - asset: fonts/Schyler-Regular.ttf
-        - asset: fonts/Schyler-Italic.ttf
+        - asset: assets/fonts/Alegreya-Black.ttf
+        - asset: assets/fonts/Alegreya-BlackItalic.ttf
           style: italic
   #   - family: Trajan Pro
   #     fonts:

@@ -2,29 +2,49 @@
 Application's first page 
 */
 import 'package:flutter/material.dart';
-import 'page_info_groupe_sosie_screen.dart'; 
+import 'connexion_screen.dart';
 
+TextStyle style = TextStyle(fontFamily: 'Montserrat', fontSize: 15.0);
 
-class FirstPage extends StatelessWidget{
-  TextStyle style = TextStyle(fontFamily: 'Montserrat', fontSize: 15.0);
-
+class FirstPage extends StatelessWidget {
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
+    final loginPage = Material(
+      elevation: 15.0,
+      borderRadius: BorderRadius.circular(30.0),
+      color: Color(0xff01A0C7),
+      child: MaterialButton(
+        minWidth: MediaQuery.of(context).size.width,
+        padding: EdgeInsets.fromLTRB(20.0, 15.0, 0.0, 15.0),
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (BuildContext context) {
+              return Login();
+            }),
+          );
+        },
+        child: Text("Connexion",
+            textAlign: TextAlign.center,
+            style: style.copyWith(
+                color: Colors.white, fontWeight: FontWeight.bold)),
+      ),
+    );
 
-    //TO DO
-    Function goToInfoGoupeSosiePage(){
-
-    }
-    /*
-    //Function to define action for the page's unique button
-    final nextAction = FloatingActionButton(
-        onPressed: goToInfoGoupeSosiePage,
-        child: Icon(
-          Icons.arrow_forward_ios
-          ),
-      );
-
-    */
+    final inscriptionPage = Material(
+      elevation: 15.0,
+      borderRadius: BorderRadius.circular(30.0),
+      color: Color(0xff01A0C7),
+      child: MaterialButton(
+        minWidth: MediaQuery.of(context).size.width,
+        padding: EdgeInsets.fromLTRB(20.0, 15.0, 0.0, 15.0),
+        onPressed: () {},
+        child: Text("Inscription",
+            textAlign: TextAlign.center,
+            style: style.copyWith(
+                color: Colors.white, fontWeight: FontWeight.bold)),
+      ),
+    );
 
     return Scaffold(
       appBar: AppBar(
@@ -36,36 +56,37 @@ class FirstPage extends StatelessWidget{
         child: Container(
           color: Colors.white,
           child: Padding(
-            padding: EdgeInsets.all(100.0), //Aim to manege spaces (left, right, ...) around widgets (column here) 
+            padding: EdgeInsets.all(
+                100.0), //Aim to manege spaces (left, right, ...) around widgets (column here)
             child: Column(
-              //crossAxisAlignment: CrossAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               //mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                SizedBox( //Aim to create empty boxes to add spaces between widgets
-                  height: 45.0,
+                SizedBox(
+                  //Aim to create empty boxes to add spaces between widgets
+                  height: 155.0,
                   child: Image.asset(
                     "assets/Logo_twinny.png",
                     fit: BoxFit.contain,
                   ),
                 ),
-                SizedBox(height:45.0),
+                SizedBox(height: 25.0),
                 Text("Creer une communauté avec ceux qui vous ressemble !",
-                textAlign: TextAlign.center,
-                style: style.copyWith(
-                  fontWeight: FontWeight.bold)),
-              
+                    textAlign: TextAlign.center,
+                    style: style.copyWith(fontWeight: FontWeight.bold)),
+                SizedBox(
+                  height: 60.0,
+                ),
+                loginPage,
+                SizedBox(
+                  height: 10.0,
+                ),
+                inscriptionPage,
               ],
             ),
           ),
-        ),    
-      ),
-
-      //This part can be removed by the final function 'nextAction' just above
-      floatingActionButton: FloatingActionButton(
-        onPressed: goToInfoGoupeSosiePage,
-        child: Icon(Icons.arrow_forward_ios),
+        ),
       ),
     );
-
   }
 }
