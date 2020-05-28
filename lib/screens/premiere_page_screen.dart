@@ -3,12 +3,14 @@ Application's first page
 */
 import 'package:flutter/material.dart';
 import 'connexion_screen.dart';
+import 'inscription_screen.dart';
 
 TextStyle style = TextStyle(fontFamily: 'Montserrat', fontSize: 15.0);
 
 class FirstPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+
     final loginPage = Material(
       elevation: 15.0,
       borderRadius: BorderRadius.circular(30.0),
@@ -18,10 +20,7 @@ class FirstPage extends StatelessWidget {
         padding: EdgeInsets.fromLTRB(20.0, 15.0, 0.0, 15.0),
         onPressed: () {
           Navigator.push(
-            context,
-            MaterialPageRoute(builder: (BuildContext context) {
-              return Login();
-            }),
+            context, MaterialPageRoute(builder: (BuildContext context) => Login()),
           );
         },
         child: Text("Connexion",
@@ -38,7 +37,12 @@ class FirstPage extends StatelessWidget {
       child: MaterialButton(
         minWidth: MediaQuery.of(context).size.width,
         padding: EdgeInsets.fromLTRB(20.0, 15.0, 0.0, 15.0),
-        onPressed: () {},
+        onPressed: () {
+          
+          Navigator.push(
+            context, MaterialPageRoute(builder: (BuildContext context) => Inscription()),
+          );
+        },
         child: Text("Inscription",
             textAlign: TextAlign.center,
             style: style.copyWith(
@@ -56,8 +60,7 @@ class FirstPage extends StatelessWidget {
         child: Container(
           color: Colors.white,
           child: Padding(
-            padding: EdgeInsets.all(
-                100.0), //Aim to manege spaces (left, right, ...) around widgets (column here)
+            padding: EdgeInsets.all(36.0), //Aim to manege spaces (left, right, ...) around widgets (column here)
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               //mainAxisAlignment: MainAxisAlignment.center,

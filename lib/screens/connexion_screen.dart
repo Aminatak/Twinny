@@ -55,7 +55,7 @@ class Login extends StatelessWidget {
                 SizedBox(
                   height: 155.0,
                   child: Image.asset(
-                    "assets/logo.png",
+                    "assets/Logo_twinny.png",
                     fit: BoxFit.contain,
                   ),
                 ),
