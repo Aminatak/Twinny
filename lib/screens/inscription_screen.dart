@@ -6,9 +6,32 @@ import 'package:flutter/material.dart';
 
 TextStyle style = TextStyle(fontFamily: 'Montserrat', fontSize: 20.0);
 
-class Inscription extends StatelessWidget {
+class Inscription extends StatefulWidget {
   @override
+  _InscriptionState createState() => _InscriptionState();
+}
+
+class _InscriptionState extends State<Inscription> {
+@override
+
   Widget build(BuildContext context) {
+
+    final connectPicture = CircleAvatar(
+      radius: 90,
+      backgroundColor: Color(0xff01A0C7),
+      child: ClipOval(
+        child:SizedBox(
+          width: 100.0,
+          height: 100.0,
+          child: Image.network(
+            "https://unsplash.com/photos/vbAEHCrvXZ0",
+            fit : BoxFit.fill,
+            ), 
+        )
+      ),
+    
+    );
+
     final emailField = TextField(
       obscureText: false,
       style: style,
@@ -36,7 +59,6 @@ class Inscription extends StatelessWidget {
           border:
               OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))),
     );
-
 
     final passwordField = TextField(
       obscureText: true,
@@ -80,17 +102,21 @@ class Inscription extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: 185.0
+                  height: 20.0
+                  ),
+                connectPicture,
+                SizedBox(
+                  height: 15.0
                   ),
                 emailField,
-                SizedBox(height: 15.0),
+                SizedBox(height: 10.0),
                 pseudoField,
-                SizedBox(height: 15.0),
+                SizedBox(height: 10.0),
                 anniversaireField,
-                SizedBox(height: 15.0),
+                SizedBox(height: 10.0),
                 passwordField,
                 SizedBox(
-                  height: 50.0,
+                  height: 30.0,
                 ),
                 loginButon,                
               ],
@@ -98,6 +124,8 @@ class Inscription extends StatelessWidget {
           ),
         ),
       ),
+         
+
     );
   }
 }
