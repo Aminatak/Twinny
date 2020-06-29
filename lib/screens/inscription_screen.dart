@@ -3,6 +3,12 @@
  */
 
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:image_picker/image_picker.dart';^
+import 'dart.io';
+import 'package:path/path.dart';
+
+
 
 TextStyle style = TextStyle(fontFamily: 'Montserrat', fontSize: 20.0);
 
@@ -12,6 +18,9 @@ class Inscription extends StatefulWidget {
 }
 
 class _InscriptionState extends State<Inscription> {
+  File _image;
+  final picker = ImagePicker();
+
 @override
 
   Widget build(BuildContext context) {
@@ -21,15 +30,14 @@ class _InscriptionState extends State<Inscription> {
       backgroundColor: Color(0xff01A0C7),
       child: ClipOval(
         child:SizedBox(
-          width: 100.0,
-          height: 100.0,
+          width: 90.0,
+          height: 90.0,
           child: Image.network(
-            "https://unsplash.com/photos/vbAEHCrvXZ0",
+            "https://images.unsplash.com/photo-1559181567-c3190ca9959b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=80",
             fit : BoxFit.fill,
             ), 
         )
       ),
-    
     );
 
     final emailField = TextField(
@@ -84,6 +92,14 @@ class _InscriptionState extends State<Inscription> {
       ),
     );
 
+
+    Future getImage() async {
+    final pickedFile = await picker.getImage(source: ImageSource.camera);
+
+    setState(() {
+      _image = File(pickedFile.path);
+    });
+  }
     return Scaffold(
       body: Center(
         child: Container(
@@ -105,6 +121,19 @@ class _InscriptionState extends State<Inscription> {
                   height: 20.0
                   ),
                 connectPicture,
+                Padding(
+                  padding: EdgeInsets.only(top:60.0),
+                  child: IconButton(
+                    icon: Icon(
+                      FontAwesomeIcons.camera,
+                      size: 30.0,
+                    ),
+                    onPressed: (){
+                      getImage()
+
+                    },
+                  ),
+                ),
                 SizedBox(
                   height: 15.0
                   ),
