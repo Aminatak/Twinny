@@ -4,8 +4,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:image_picker/image_picker.dart';^
-import 'dart.io';
+import 'package:image_picker/image_picker.dart';
+import 'dart:io';
 import 'package:path/path.dart';
 
 
@@ -30,8 +30,8 @@ class _InscriptionState extends State<Inscription> {
       backgroundColor: Color(0xff01A0C7),
       child: ClipOval(
         child:SizedBox(
-          width: 90.0,
-          height: 90.0,
+          width: 150.0,
+          height: 150.0,
           child: Image.network(
             "https://images.unsplash.com/photo-1559181567-c3190ca9959b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=80",
             fit : BoxFit.fill,
@@ -120,20 +120,26 @@ class _InscriptionState extends State<Inscription> {
                 SizedBox(
                   height: 20.0
                   ),
+                Row(children: <Widget>[
+                  
                 connectPicture,
-                Padding(
-                  padding: EdgeInsets.only(top:60.0),
-                  child: IconButton(
-                    icon: Icon(
-                      FontAwesomeIcons.camera,
-                      size: 30.0,
-                    ),
-                    onPressed: (){
-                      getImage()
+                
+                  Padding(
+                    padding: EdgeInsets.only(top:60.0),
+                    child: IconButton(
+                      icon: Icon(
+                        FontAwesomeIcons.camera,
+                        size: 30.0,
+                        ),
+                        onPressed: (){
+                          // getImage()
+                          },
+                          ),
+                          ),
 
-                    },
-                  ),
-                ),
+
+                ],),  
+                
                 SizedBox(
                   height: 15.0
                   ),
@@ -153,8 +159,6 @@ class _InscriptionState extends State<Inscription> {
           ),
         ),
       ),
-         
-
     );
   }
 }
