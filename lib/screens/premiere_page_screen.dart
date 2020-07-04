@@ -10,7 +10,6 @@ TextStyle style = TextStyle(fontFamily: 'Montserrat', fontSize: 15.0);
 class FirstPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-
     final loginPage = Material(
       elevation: 15.0,
       borderRadius: BorderRadius.circular(30.0),
@@ -20,7 +19,8 @@ class FirstPage extends StatelessWidget {
         padding: EdgeInsets.fromLTRB(20.0, 15.0, 0.0, 15.0),
         onPressed: () {
           Navigator.push(
-            context, MaterialPageRoute(builder: (BuildContext context) => Login()),
+            context,
+            MaterialPageRoute(builder: (BuildContext context) => Login()),
           );
         },
         child: Text("Connexion",
@@ -38,9 +38,9 @@ class FirstPage extends StatelessWidget {
         minWidth: MediaQuery.of(context).size.width,
         padding: EdgeInsets.fromLTRB(20.0, 15.0, 0.0, 15.0),
         onPressed: () {
-          
           Navigator.push(
-            context, MaterialPageRoute(builder: (BuildContext context) => Inscription()),
+            context,
+            MaterialPageRoute(builder: (BuildContext context) => Inscription()),
           );
         },
         child: Text("Inscription",
@@ -60,14 +60,15 @@ class FirstPage extends StatelessWidget {
         child: Container(
           color: Colors.white,
           child: Padding(
-            padding: EdgeInsets.all(36.0), //Aim to manege spaces (left, right, ...) around widgets (column here)
+            padding: EdgeInsets.all(
+                36.0), //Aim to manege spaces (left, right, ...) around widgets (column here)
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               //mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 SizedBox(
                   //Aim to create empty boxes to add spaces between widgets
-                  height: 155.0,
+                  height: 255.0,
                   child: Image.asset(
                     "assets/Logo_twinny.png",
                     fit: BoxFit.contain,
