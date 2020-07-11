@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projet_twinny/pages/FirstPage.dart';
 import 'package:projet_twinny/pages/HomePage.dart';
 
 void main()
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
         accentColor: Colors.white70,
         cardColor: Colors.white70,
       ),
-      home: HomePage(),
+      home: FirstPage(),
       /*Scaffold(
         appBar: AppBar(
           title: Text('Twinny', style: TextStyle(color: Colors.white, fontSize: 20.0, fontWeight: FontWeight.bold),),
