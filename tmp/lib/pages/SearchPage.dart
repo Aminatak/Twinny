@@ -30,7 +30,8 @@ class _SearchPagesState extends State<SearchPage> with AutomaticKeepAliveClientM
 
   AppBar searchPageHeader() {
     return AppBar(
-      backgroundColor: Colors.lightBlueAccent,
+      automaticallyImplyLeading: false,
+      backgroundColor: Colors.lightBlue,
       title: TextFormField(
         style: TextStyle(fontSize: 18.0, color: Colors.white),
         controller: searchTextEditingController,
@@ -94,6 +95,7 @@ class _SearchPagesState extends State<SearchPage> with AutomaticKeepAliveClientM
   bool get wantKeepAlive => true;
 
   @override
+  // ignore: must_call_super
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
