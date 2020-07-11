@@ -35,6 +35,7 @@ class _UploadPageState extends State<UploadPage> with AutomaticKeepAliveClientMi
 
   captureImageWithCamera() async {
     Navigator.pop(context);
+    // ignore: deprecated_member_use
     File imageFile = await ImagePicker.pickImage(
       source: ImageSource.camera,
       maxHeight: 680,
@@ -47,6 +48,7 @@ class _UploadPageState extends State<UploadPage> with AutomaticKeepAliveClientMi
 
   pickImageFromGallery() async {
     Navigator.pop(context);
+    // ignore: deprecated_member_use
     File imageFile = await ImagePicker.pickImage(
       source: ImageSource.gallery,
     );

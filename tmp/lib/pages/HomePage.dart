@@ -126,8 +126,8 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       body: PageView(
         children: <Widget>[
-          TimeLinePage(),
-        //RaisedButton.icon(onPressed: logoutUser, icon: Icon(Icons.close), label: Text("Déconnexion")),
+          //TimeLinePage(),
+          RaisedButton.icon(onPressed: logoutUser, icon: Icon(Icons.close), label: Text("Déconnexion")),
           SearchPage(),
           TwinnyPage(),
           UploadPage(gCurrentUser: currentUser,),
@@ -148,7 +148,7 @@ class _HomePageState extends State<HomePage> {
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home)),
           BottomNavigationBarItem(icon: Icon(Icons.search)),
-          BottomNavigationBarItem(icon: Icon(Icons.group)),
+          BottomNavigationBarItem(icon: Icon(Icons.title)),
           BottomNavigationBarItem(icon: Icon(Icons.photo_camera, size: 37.0,)),
           BottomNavigationBarItem(icon: Icon(Icons.favorite)),
           BottomNavigationBarItem(icon: Icon(Icons.person)),
