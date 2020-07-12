@@ -145,7 +145,13 @@ class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: header(context, strTitle: "Profile"),
+      //appBar: header(context, strTitle: "Profile",),
+      appBar: AppBar(
+        title: Text('Profile'),
+        centerTitle: true,
+        automaticallyImplyLeading: false,
+      ),
+
       body: ListView(
         children: <Widget>[
           createProfileTopView(),

@@ -103,7 +103,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
                   padding: EdgeInsets.only(top: 15.0, bottom: 7.0),
                   child: CircleAvatar(radius: 52.0, backgroundColor: Colors.white), //backgroundImage: CachedNetworkImageProvider(user.url),),
                     //----------------------------------------------------------//start at 26.41 - 32.12
-                  //Video => Edit Profile at 23.13 user.username, style: TextStyle(fontSize: 14.0, color: Colors
+                  //Edit Profile at 23.13 user.username, style: TextStyle(fontSize: 14.0, color: Colors
                 ),
                 Padding(
                   padding: EdgeInsets.all(16.0),
