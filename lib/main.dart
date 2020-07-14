@@ -1,22 +1,39 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-//import 'screens/premiere_page_screen.dart';
-//import 'screens/connexion_screen.dart';
-//import 'screens/inscription_screen.dart';
-//import 'screens/page_info_groupe_sosie_screen.dart';
-import 'screens/twinny.dart';
+import 'package:projet_twinny/pages/FirstPage.dart';
+import 'package:projet_twinny/pages/HomePage.dart';
 
-void main() => runApp(MyApp());
+void main()
+{
+  WidgetsFlutterBinding.ensureInitialized();
+  Firestore.instance.settings(timestampsInSnapshotsEnabled: true);
+
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Application twinny',
-      //home: FirstPage()
-      //home: Login()
-      //home: Inscription()
-      //home: InfoGroupSosie()
-      home: TwinnyPage(),
+      title: 'Twinny',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData
+      (
+        scaffoldBackgroundColor: Colors.white,
+        dialogBackgroundColor: Colors.black,
+        primarySwatch: Colors.lightBlue,
+        accentColor: Colors.white70,
+        cardColor: Colors.white70,
+      ),
+      home: FirstPage(),
+      /*Scaffold(
+        appBar: AppBar(
+          title: Text('Twinny', style: TextStyle(color: Colors.white, fontSize: 20.0, fontWeight: FontWeight.bold),),
+        ),
+        body: Center(
+          child: Text('Welcome to Twinny', style: TextStyle(color: Colors.white, fontSize: 40.0,),),
+        ),
+      ),*/
     );
   }
 }
