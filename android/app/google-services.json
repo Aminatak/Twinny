@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "856961221545",
+    "firebase_url": "https://twinny-9e8ae.firebaseio.com",
+    "project_id": "twinny-9e8ae",
+    "storage_bucket": "twinny-9e8ae.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:856961221545:android:fe70bfcd9282ab3d3a7ab8",
+        "android_client_info": {
+          "package_name": "com.projetannuel.twinny"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "856961221545-c4rs51187nlr08675sq3mnr9779pvuhf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.projetannuel.twinny",
+            "certificate_hash": "490fa1c0957eccb670ac42cd9e2d3723d12de3fc"
+          }
+        },
+        {
+          "client_id": "856961221545-jcenf3oi62jvd71infcano811arj9ri1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJyU3HhZIHEQ29eRWvNUP1Z4SQV3fBnbM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "856961221545-jcenf3oi62jvd71infcano811arj9ri1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
